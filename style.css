@@ -23,9 +23,9 @@ section {
 }
 
 
-div {
-    /*   border: 1px solid grey; */
-    }
+/* div {
+      border: 1px solid grey;
+    } */
     
     body {
       font-family: 'Source Sans Pro', sans-serif;
@@ -108,7 +108,7 @@ div {
     }
 
     .portrait {
-        padding-bottom: 66%;
+        padding-bottom: 60%;
     }
     
     
@@ -123,7 +123,7 @@ div {
     
     .card a {
       display: inline-block;
-      margin-top; 1rem;
+      margin-top: 1rem;
     }
     
     @media (max-width: 36em) {
