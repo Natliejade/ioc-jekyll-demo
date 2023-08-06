@@ -1,5 +1,58 @@
 ---
 layout: default
-title: Homepage
+title: Home Page
+news:
+    - title: Big Sale
+      description: Exciting things are happening
+      date: 13th Jan 
+      category: promo
+      url: https://www.sale.com
+    - title: Valentines Special
+      description: Love is in the air
+      date: 14th feb
+      category: holiday
+      url: https://www.sale.com
+    - title: 3 for 2 
+      description: Buy two get the third free
+      date: 19th Feb 
+      category: promo
+      url: https://www.sale.com
 ---
-<h1>Welcome to your homepage!</h1>
+
+
+<!-- <section>
+    {% for item in page.fruit %}
+    <div class="card">
+        <h2> {{item.title}} </h2>
+        <p> {{item.description}}</p>
+    </div>
+    {% endfor %}
+</section > -->
+
+<section class="grid-spaceBetween padded bg-featured mob-padded-0 latest-news center"> 
+  <div class="col-2_xs-12 light-text mob-padded"> 
+    <h2> Latest News </h2>
+    <p class="subtle"> Covering March April 2020 </p>
+  </div>
+
+
+<!-- Horizontal scroll -->
+   <div class="col-9_xs-12 grid horizontal-scroll"> 
+<!-- Cards  -->      
+  {% for item in page.news%}     
+    <div class="col-4_xs-7 card"> 
+      <div class="bg-image1">
+         <span> {{item.category}} </span>
+      </div>
+      <div class="post-info">
+        <p class="date"> {{item.date}} </p>
+        <h3> {{item.title}} </h3>
+        <p> {{item.description}} </p>
+        <a href="{{item.url}}"> Find out more &nbsp; &#10141; </a>
+      </div>
+    </div>  
+    {% endfor %}
+  </div>
+
+
+</section>
